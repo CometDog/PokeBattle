@@ -19,7 +19,6 @@ Discarded input sections
                 0x0000000000000000        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .text          0x0000000000000000        0x0 src/main.c.30.o
  .bss           0x0000000000000000        0x0 src/main.c.30.o
- .text.upcase   0x0000000000000000       0x1c src/main.c.30.o
  .text          0x0000000000000000        0x0 aplite/appinfo.auto.c.30.o
  .bss           0x0000000000000000        0x0 aplite/appinfo.auto.c.30.o
  .bss           0x0000000000000000        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
@@ -182,8 +181,6 @@ Discarded input sections
                 0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
  .text.fonts_get_system_font
                 0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
- .text.fonts_unload_custom_font
-                0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
  .text.free     0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
  .text.gbitmap_create_as_sub_bitmap
                 0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
@@ -277,8 +274,6 @@ Discarded input sections
  .text.layer_set_clips
                 0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
  .text.layer_set_frame
-                0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
- .text.layer_set_hidden
                 0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
  .text.light_enable
                 0x0000000000000000        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
@@ -677,223 +672,229 @@ LOAD /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/ar
  .note.gnu.build-id
                 0x0000000000000084       0x24 linker stubs
 
-.text           0x00000000000000a8      0x7bf
+.text           0x00000000000000a8      0x8d3
  *(.text)
  .text          0x00000000000000a8       0x14 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
  *(.text.*)
- .text.update_bluetooth
-                0x00000000000000bc        0x2 src/main.c.30.o
-                0x00000000000000bc                update_bluetooth
- *fill*         0x00000000000000be        0x2 
  .text.update_time
-                0x00000000000000c0       0x60 src/main.c.30.o
+                0x00000000000000bc       0x60 src/main.c.30.o
  .text.tick_handler
-                0x0000000000000120        0x4 src/main.c.30.o
+                0x000000000000011c        0x4 src/main.c.30.o
  .text.date_update_proc
-                0x0000000000000124       0x6c src/main.c.30.o
+                0x0000000000000120       0x6c src/main.c.30.o
  .text.window_unload
-                0x0000000000000190       0x4c src/main.c.30.o
+                0x000000000000018c      0x128 src/main.c.30.o
  .text.window_load
-                0x00000000000001dc      0x350 src/main.c.30.o
+                0x00000000000002b4      0x348 src/main.c.30.o
  .text.update_battery
-                0x000000000000052c       0x78 src/main.c.30.o
- .text.bg_update_proc
-                0x00000000000005a4       0x28 src/main.c.30.o
+                0x00000000000005fc       0x80 src/main.c.30.o
+ .text.bluetooth_color_proc
+                0x000000000000067c       0x2a src/main.c.30.o
+ *fill*         0x00000000000006a6        0x2 
+ .text.update_bluetooth
+                0x00000000000006a8       0x20 src/main.c.30.o
+                0x00000000000006a8                update_bluetooth
  .text.startup.main
-                0x00000000000005cc       0x78 src/main.c.30.o
-                0x00000000000005cc                main
+                0x00000000000006c8       0x78 src/main.c.30.o
+                0x00000000000006c8                main
  .text.app_event_loop
-                0x0000000000000644        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000644                app_event_loop
- .text.battery_state_service_peek
-                0x0000000000000650        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000650                battery_state_service_peek
- .text.bitmap_layer_create
-                0x000000000000065c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x000000000000065c                bitmap_layer_create
- .text.bitmap_layer_destroy
-                0x0000000000000668        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000668                bitmap_layer_destroy
- .text.bitmap_layer_get_layer
-                0x0000000000000674        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000674                bitmap_layer_get_layer
- .text.bitmap_layer_set_bitmap
-                0x0000000000000680        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000680                bitmap_layer_set_bitmap
- .text.bluetooth_connection_service_subscribe
-                0x000000000000068c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x000000000000068c                bluetooth_connection_service_subscribe
- .text.clock_is_24h_style
-                0x0000000000000698        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000698                clock_is_24h_style
- .text.fonts_load_custom_font
-                0x00000000000006a4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006a4                fonts_load_custom_font
- .text.gbitmap_create_with_resource
-                0x00000000000006b0        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006b0                gbitmap_create_with_resource
- .text.gbitmap_destroy
-                0x00000000000006bc        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006bc                gbitmap_destroy
- .text.graphics_context_set_fill_color
-                0x00000000000006c8        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006c8                graphics_context_set_fill_color
- .text.graphics_fill_rect
-                0x00000000000006d4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006d4                graphics_fill_rect
- .text.layer_add_child
-                0x00000000000006e0        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006e0                layer_add_child
- .text.layer_create
-                0x00000000000006ec        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006ec                layer_create
- .text.layer_destroy
-                0x00000000000006f8        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000006f8                layer_destroy
- .text.layer_get_bounds
-                0x0000000000000704        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000704                layer_get_bounds
- .text.layer_set_update_proc
-                0x0000000000000710        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000710                layer_set_update_proc
- .text.localtime
-                0x000000000000071c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x000000000000071c                localtime
- .text.memset   0x0000000000000728        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000728                memset
- .text.resource_get_handle
-                0x0000000000000734        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000734                resource_get_handle
- .text.strftime
                 0x0000000000000740        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000740                strftime
- .text.text_layer_create
+                0x0000000000000740                app_event_loop
+ .text.battery_state_service_peek
                 0x000000000000074c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x000000000000074c                text_layer_create
- .text.text_layer_destroy
+                0x000000000000074c                battery_state_service_peek
+ .text.bitmap_layer_create
                 0x0000000000000758        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000758                text_layer_destroy
- .text.text_layer_get_layer
+                0x0000000000000758                bitmap_layer_create
+ .text.bitmap_layer_destroy
                 0x0000000000000764        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000764                text_layer_get_layer
- .text.text_layer_set_background_color
+                0x0000000000000764                bitmap_layer_destroy
+ .text.bitmap_layer_get_layer
                 0x0000000000000770        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000770                text_layer_set_background_color
- .text.text_layer_set_font
+                0x0000000000000770                bitmap_layer_get_layer
+ .text.bitmap_layer_set_bitmap
                 0x000000000000077c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x000000000000077c                text_layer_set_font
- .text.text_layer_set_text
+                0x000000000000077c                bitmap_layer_set_bitmap
+ .text.bluetooth_connection_service_subscribe
                 0x0000000000000788        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000788                text_layer_set_text
- .text.text_layer_set_text_alignment
+                0x0000000000000788                bluetooth_connection_service_subscribe
+ .text.clock_is_24h_style
                 0x0000000000000794        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000794                text_layer_set_text_alignment
- .text.text_layer_set_text_color
+                0x0000000000000794                clock_is_24h_style
+ .text.fonts_load_custom_font
                 0x00000000000007a0        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007a0                text_layer_set_text_color
- .text.tick_timer_service_subscribe
+                0x00000000000007a0                fonts_load_custom_font
+ .text.fonts_unload_custom_font
                 0x00000000000007ac        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007ac                tick_timer_service_subscribe
- .text.tick_timer_service_unsubscribe
+                0x00000000000007ac                fonts_unload_custom_font
+ .text.gbitmap_create_with_resource
                 0x00000000000007b8        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007b8                tick_timer_service_unsubscribe
- .text.time     0x00000000000007c4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007c4                time
- .text.window_create
+                0x00000000000007b8                gbitmap_create_with_resource
+ .text.gbitmap_destroy
+                0x00000000000007c4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000007c4                gbitmap_destroy
+ .text.graphics_context_set_fill_color
                 0x00000000000007d0        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007d0                window_create
- .text.window_destroy
+                0x00000000000007d0                graphics_context_set_fill_color
+ .text.graphics_fill_rect
                 0x00000000000007dc        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007dc                window_destroy
- .text.window_get_root_layer
+                0x00000000000007dc                graphics_fill_rect
+ .text.layer_add_child
                 0x00000000000007e8        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007e8                window_get_root_layer
- .text.window_set_window_handlers
+                0x00000000000007e8                layer_add_child
+ .text.layer_create
                 0x00000000000007f4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x00000000000007f4                window_set_window_handlers
- .text.window_stack_push
+                0x00000000000007f4                layer_create
+ .text.layer_destroy
                 0x0000000000000800        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
-                0x0000000000000800                window_stack_push
+                0x0000000000000800                layer_destroy
+ .text.layer_get_bounds
+                0x000000000000080c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x000000000000080c                layer_get_bounds
+ .text.layer_set_hidden
+                0x0000000000000818        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000818                layer_set_hidden
+ .text.layer_set_update_proc
+                0x0000000000000824        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000824                layer_set_update_proc
+ .text.localtime
+                0x0000000000000830        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000830                localtime
+ .text.memset   0x000000000000083c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x000000000000083c                memset
+ .text.resource_get_handle
+                0x0000000000000848        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000848                resource_get_handle
+ .text.strftime
+                0x0000000000000854        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000854                strftime
+ .text.text_layer_create
+                0x0000000000000860        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000860                text_layer_create
+ .text.text_layer_destroy
+                0x000000000000086c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x000000000000086c                text_layer_destroy
+ .text.text_layer_get_layer
+                0x0000000000000878        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000878                text_layer_get_layer
+ .text.text_layer_set_background_color
+                0x0000000000000884        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000884                text_layer_set_background_color
+ .text.text_layer_set_font
+                0x0000000000000890        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000890                text_layer_set_font
+ .text.text_layer_set_text
+                0x000000000000089c        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x000000000000089c                text_layer_set_text
+ .text.text_layer_set_text_alignment
+                0x00000000000008a8        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008a8                text_layer_set_text_alignment
+ .text.text_layer_set_text_color
+                0x00000000000008b4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008b4                text_layer_set_text_color
+ .text.tick_timer_service_subscribe
+                0x00000000000008c0        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008c0                tick_timer_service_subscribe
+ .text.tick_timer_service_unsubscribe
+                0x00000000000008cc        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008cc                tick_timer_service_unsubscribe
+ .text.time     0x00000000000008d8        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008d8                time
+ .text.window_create
+                0x00000000000008e4        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008e4                window_create
+ .text.window_destroy
+                0x00000000000008f0        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008f0                window_destroy
+ .text.window_get_root_layer
+                0x00000000000008fc        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x00000000000008fc                window_get_root_layer
+ .text.window_set_window_handlers
+                0x0000000000000908        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000908                window_set_window_handlers
+ .text.window_stack_push
+                0x0000000000000914        0xc /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+                0x0000000000000914                window_stack_push
  *(.rodata)
- .rodata        0x000000000000080c       0x38 src/main.c.30.o
+ .rodata        0x0000000000000920       0x38 src/main.c.30.o
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000000844       0x23 src/main.c.30.o
+                0x0000000000000958       0x23 src/main.c.30.o
 
-.glue_7         0x0000000000000868        0x0
+.glue_7         0x000000000000097c        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000868        0x0
+.glue_7t        0x000000000000097c        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000868        0x0
+.vfp11_veneer   0x000000000000097c        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000868        0x0
+.v4_bx          0x000000000000097c        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000868        0x0
+.iplt           0x000000000000097c        0x0
  .iplt          0x0000000000000000        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x0000000000000868        0x0
+.rel.dyn        0x000000000000097c        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x0000000000000868       0x1b
+.data           0x000000000000097c       0x1b
  *(.data)
- .data          0x0000000000000868        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x0000000000000868        0x4 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000000868                __dso_handle
- .data          0x000000000000086c        0x0 src/main.c.30.o
- .data          0x000000000000086c        0x0 aplite/appinfo.auto.c.30.o
- .data          0x000000000000086c        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
- .data          0x000000000000086c        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x000000000000086c        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x000000000000097c        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x000000000000097c        0x4 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x000000000000097c                __dso_handle
+ .data          0x0000000000000980        0x0 src/main.c.30.o
+ .data          0x0000000000000980        0x0 aplite/appinfo.auto.c.30.o
+ .data          0x0000000000000980        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/Pebble/aplite/lib/libpebble.a(tmpQA9vUTpebble.o)
+ .data          0x0000000000000980        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x0000000000000980        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
  .data.s_time_buffer
-                0x000000000000086c        0x6 src/main.c.30.o
+                0x0000000000000980        0x6 src/main.c.30.o
  .data.s_day_buffer
-                0x0000000000000872        0xa src/main.c.30.o
+                0x0000000000000986        0xa src/main.c.30.o
  .data.s_date_buffer
-                0x000000000000087c        0x7 src/main.c.30.o
+                0x0000000000000990        0x7 src/main.c.30.o
 
-.igot.plt       0x0000000000000884        0x0
+.igot.plt       0x0000000000000998        0x0
  .igot.plt      0x0000000000000000        0x0 /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.bss            0x0000000000000884       0x40
+.bss            0x0000000000000998       0x40
  *(.bss)
  *(.bss.*)
  .bss.s_background_layer
-                0x0000000000000884        0x4 src/main.c.30.o
- .bss.s_background_bitmap
-                0x0000000000000888        0x4 src/main.c.30.o
- .bss.s_date_label
-                0x000000000000088c        0x4 src/main.c.30.o
- .bss.s_time_layer
-                0x0000000000000890        0x4 src/main.c.30.o
- .bss.s_solid_bg_layer
-                0x0000000000000894        0x4 src/main.c.30.o
- .bss.s_poke1_bitmap
-                0x0000000000000898        0x4 src/main.c.30.o
- .bss.s_poke2_bitmap
-                0x000000000000089c        0x4 src/main.c.30.o
- .bss.s_time_label
-                0x00000000000008a0        0x4 src/main.c.30.o
- .bss.s_reg_font
-                0x00000000000008a4        0x4 src/main.c.30.o
- .bss.s_battery_layer
-                0x00000000000008a8        0x4 src/main.c.30.o
- .bss.s_poke2_layer
-                0x00000000000008ac        0x4 src/main.c.30.o
- .bss.s_bluetooth_layer
-                0x00000000000008b0        0x4 src/main.c.30.o
+                0x0000000000000998        0x4 src/main.c.30.o
  .bss.s_poke1_layer
-                0x00000000000008b4        0x4 src/main.c.30.o
- .bss.s_main_window
-                0x00000000000008b8        0x4 src/main.c.30.o
+                0x000000000000099c        0x4 src/main.c.30.o
+ .bss.s_time_layer
+                0x00000000000009a0        0x4 src/main.c.30.o
+ .bss.s_date_label
+                0x00000000000009a4        0x4 src/main.c.30.o
+ .bss.s_battery_layer
+                0x00000000000009a8        0x4 src/main.c.30.o
+ .bss.s_background_bitmap
+                0x00000000000009ac        0x4 src/main.c.30.o
+ .bss.s_poke2_layer
+                0x00000000000009b0        0x4 src/main.c.30.o
  .bss.s_time_font
-                0x00000000000008bc        0x4 src/main.c.30.o
+                0x00000000000009b4        0x4 src/main.c.30.o
+ .bss.s_poke2_bitmap
+                0x00000000000009b8        0x4 src/main.c.30.o
+ .bss.s_time_label
+                0x00000000000009bc        0x4 src/main.c.30.o
+ .bss.s_reg_font
+                0x00000000000009c0        0x4 src/main.c.30.o
+ .bss.s_enemy_layer
+                0x00000000000009c4        0x4 src/main.c.30.o
+ .bss.s_bluetooth_layer
+                0x00000000000009c8        0x4 src/main.c.30.o
+ .bss.s_main_window
+                0x00000000000009cc        0x4 src/main.c.30.o
+ .bss.s_poke1_bitmap
+                0x00000000000009d0        0x4 src/main.c.30.o
  .bss.s_day_label
-                0x00000000000008c0        0x4 src/main.c.30.o
+                0x00000000000009d4        0x4 src/main.c.30.o
 
 DISCARD
  libc.a(*)
@@ -926,35 +927,35 @@ OUTPUT(/Users/James/Development Workspaces/Pebble/PokeBattle/build/aplite/pebble
  .comment       0x0000000000000000       0x4f aplite/appinfo.auto.c.30.o
  .comment       0x0000000000000000       0x4f /Users/James/pebble-dev/PebbleSDK-3.0-beta10/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000     0x16b7
- .debug_info    0x0000000000000000     0x1358 src/main.c.30.o
- .debug_info    0x0000000000001358      0x35f aplite/appinfo.auto.c.30.o
+.debug_info     0x0000000000000000     0x16f6
+ .debug_info    0x0000000000000000     0x1397 src/main.c.30.o
+ .debug_info    0x0000000000001397      0x35f aplite/appinfo.auto.c.30.o
 
-.debug_abbrev   0x0000000000000000      0x3e2
- .debug_abbrev  0x0000000000000000      0x344 src/main.c.30.o
- .debug_abbrev  0x0000000000000344       0x9e aplite/appinfo.auto.c.30.o
+.debug_abbrev   0x0000000000000000      0x3c3
+ .debug_abbrev  0x0000000000000000      0x325 src/main.c.30.o
+ .debug_abbrev  0x0000000000000325       0x9e aplite/appinfo.auto.c.30.o
 
-.debug_loc      0x0000000000000000      0x308
- .debug_loc     0x0000000000000000      0x308 src/main.c.30.o
+.debug_loc      0x0000000000000000      0x34e
+ .debug_loc     0x0000000000000000      0x34e src/main.c.30.o
 
-.debug_aranges  0x0000000000000000       0x80
+.debug_aranges  0x0000000000000000       0x78
  .debug_aranges
-                0x0000000000000000       0x68 src/main.c.30.o
+                0x0000000000000000       0x60 src/main.c.30.o
  .debug_aranges
-                0x0000000000000068       0x18 aplite/appinfo.auto.c.30.o
+                0x0000000000000060       0x18 aplite/appinfo.auto.c.30.o
 
-.debug_ranges   0x0000000000000000       0x58
- .debug_ranges  0x0000000000000000       0x58 src/main.c.30.o
+.debug_ranges   0x0000000000000000       0x50
+ .debug_ranges  0x0000000000000000       0x50 src/main.c.30.o
 
-.debug_line     0x0000000000000000      0x516
- .debug_line    0x0000000000000000      0x3d7 src/main.c.30.o
- .debug_line    0x00000000000003d7      0x13f aplite/appinfo.auto.c.30.o
+.debug_line     0x0000000000000000      0x560
+ .debug_line    0x0000000000000000      0x421 src/main.c.30.o
+ .debug_line    0x0000000000000421      0x13f aplite/appinfo.auto.c.30.o
 
-.debug_str      0x0000000000000000      0xbaf
- .debug_str     0x0000000000000000      0x99c src/main.c.30.o
-                                        0xa41 (size before relaxing)
- .debug_str     0x000000000000099c      0x213 aplite/appinfo.auto.c.30.o
+.debug_str      0x0000000000000000      0xc19
+ .debug_str     0x0000000000000000      0xa06 src/main.c.30.o
+                                        0xaab (size before relaxing)
+ .debug_str     0x0000000000000a06      0x213 aplite/appinfo.auto.c.30.o
                                         0x405 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x124
- .debug_frame   0x0000000000000000      0x124 src/main.c.30.o
+.debug_frame    0x0000000000000000      0x114
+ .debug_frame   0x0000000000000000      0x114 src/main.c.30.o
