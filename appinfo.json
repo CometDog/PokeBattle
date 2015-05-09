@@ -1,0 +1,35 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "james.j.downs@gmail.com",
+    "longName": "PokeBattle",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/Pokemon GB.ttf",
+                "name": "POKEMON_BOLD_10",
+                "type": "font"
+            },
+            {
+                "file": "fonts/Pokemon GB.ttf",
+                "name": "POKEMON_REG_12",
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "PokeBattle",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "62df312e-71b7-480e-832a-a6b7a21f2bc5",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
