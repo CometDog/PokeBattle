@@ -17,6 +17,21 @@
                 "file": "fonts/Pokemon GB.ttf",
                 "name": "POKEMON_REG_12",
                 "type": "font"
+            },
+            {
+                "file": "images/pokebattle.png",
+                "name": "BACKGROUND",
+                "type": "png"
+            },
+            {
+                "file": "images/charizard.png",
+                "name": "POKE1",
+                "type": "png"
+            },
+            {
+                "file": "images/mew.png",
+                "name": "POKE2",
+                "type": "png"
             }
         ]
     },

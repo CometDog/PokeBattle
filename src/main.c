@@ -1,5 +1,5 @@
 #include "pebble.h"
-#include "pebble-assist.h"
+#include "libs/pebble-assist.h"
   
 #ifdef PBL_COLOR // Only use this for color
   #include "gcolor_definitions.h" // Allows the use of colors
@@ -99,18 +99,20 @@ static void window_load(Window *window) {
   //s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_OKUDA_16)); // Date font
   //s_star_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_OKUDA_BOLD_25)); // Star font
   
-  //s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_BACKGROUND); // Set the bitmap resource
+  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_BACKGROUND); // Set the bitmap resource
+  s_poke1_bitmap = gbitmap_create_with_resource(RESOURCE_ID_POKE1);
+  s_poke2_bitmap = gbitmap_create_with_resource(RESOURCE_ID_POKE2);
 
   s_solid_bg_layer = layer_create(bounds); // Create the solid color background layer
   s_background_layer = bitmap_layer_create(bounds); // Create the face layer
-  s_poke1_layer = bitmap_layer_create(GRect(72, 5, 130, 95));
-  s_poke2_layer = bitmap_layer_create(GRect(10, 75, 130, 95));
+  s_poke1_layer = bitmap_layer_create(GRect(0, 56, 55, 56));
+  s_poke2_layer = bitmap_layer_create(GRect(88, 3, 56, 56));
   s_time_layer = layer_create(bounds);
-  s_battery_layer = layer_create(GRect(92,89,144,168));
+  s_battery_layer = layer_create(GRect(82,87,144,168));
   s_bluetooth_layer = layer_create(GRect( 20, 20, 50,5));
-  s_time_label = text_layer_create(GRect(10, 5, 130, 95)); // Create the time layer
-  s_day_label = text_layer_create(GRect(10, 75, 130, 95)); // Create the day label
-  s_date_label = text_layer_create(GRect(10, 95, 130, 95)); // Create the star date label
+  s_time_label = text_layer_create(GRect(7, 5, 130, 95)); // Create the time layer
+  s_day_label = text_layer_create(GRect(10, 73, 130, 95)); // Create the day label
+  s_date_label = text_layer_create(GRect(10, 93, 130, 95)); // Create the star date label
   
   
 /*#ifdef PBL_COLOR
@@ -127,7 +129,9 @@ static void window_load(Window *window) {
   layer_set_update_proc(s_solid_bg_layer, bg_update_proc); // Update the solid color background
   layer_set_update_proc(s_battery_layer, update_battery);
   layer_set_update_proc(s_time_layer, date_update_proc); // Update the date layer
-  //bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap); // Set the face bitmap to the background layer
+  bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap); // Set the face bitmap to the background layer
+  bitmap_layer_set_bitmap(s_poke1_layer, s_poke1_bitmap);
+  bitmap_layer_set_bitmap(s_poke2_layer, s_poke2_bitmap);
   
   text_layer_set_colors(s_time_label, GColorBlack, GColorClear);
   text_layer_set_colors(s_day_label, GColorBlack, GColorClear);
@@ -149,10 +153,12 @@ static void window_load(Window *window) {
   text_layer_set_text_alignment(s_day_label, GTextAlignmentRight);
   
   layer_add_to_window(s_solid_bg_layer, window);
+  bitmap_layer_add_to_window(s_background_layer, window);
+  bitmap_layer_add_to_window(s_poke1_layer, window);
+  bitmap_layer_add_to_window(s_poke2_layer, window);
   layer_add_to_window(s_battery_layer, window);
   layer_add_to_window(s_bluetooth_layer, window);
   layer_add_to_window(s_time_layer, window);
-  bitmap_layer_add_to_window(s_background_layer, window);
   text_layer_add_to_layer(s_time_label, s_time_layer);
   text_layer_add_to_layer(s_date_label, s_time_layer);
   text_layer_add_to_layer(s_day_label, s_time_layer);
